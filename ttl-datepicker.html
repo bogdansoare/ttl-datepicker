@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-menu/core-menu.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-dropdown/paper-dropdown.html">
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/paper-datepicker/paper-datepicker.html">
+<link rel="import" href="../bower_components/nemento-timepicker/nemento-timepicker.html">
+
+<polymer-element name="ttl-datepicker">
+  <template>
+    <style>
+      :host .datepicker {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      :host paper-dropdown-menu {
+        width: 8em;
+      }
+
+      :host .result {
+        text-align: center;
+      }
+    </style>
+
+    <div class="datepicker">
+      <paper-dropdown-menu label="Direction">
+        <paper-dropdown class="dropdown">
+          <core-menu class="menu" selected={{direction}}>
+            <paper-item name="Departing">Departing</paper-item>
+            <paper-item name="Arriving">Arriving</paper-item>
+          </core-menu>
+        </paper-dropdown>
+      </paper-dropdown-menu>
+
+      <paper-datepicker locale="en-gb" formatDate="ll" datePicked="{{datePicked}}" ></paper-datepicker>
+
+      <nemento-timepicker time={{timePicked}} ampm="false" valign="top" step="10"></nemento-timepicker>
+    </div>
+
+    <h2 class="result">{{direction}} {{datePicked|format("DD-MMM-YYYY")}} {{timePicked|format("HH:mm")}}</h2>
+  </template>
+  <script>
+    Polymer({
+      direction: "Departing",
+      ready: function() {
+        this.datePicked = moment();
+        this.timePicked = moment().hour(9).minute(0);
+      }
+    });
+  </script>
+</polymer-element>

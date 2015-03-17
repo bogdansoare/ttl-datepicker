@@ -1,0 +1,21 @@
+{
+  "name": "TTL.DateTimePicker",
+  "version": "0.0.0",
+  "authors": [
+    "Bogdan Soare <bgdn.sr@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5",
+    "paper-dropdown-menu": "Polymer/paper-dropdown-menu#~0.5.5",
+    "paper-datepicker": "*",
+    "nemento-timepicker": "https://github.com/nemento/nemento-timepicker.git#~0.0.2"
+  }
+}

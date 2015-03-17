@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TTL DateTime Picker</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="app.css" type="text/css" />
+
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="ttl-datepicker.html">
+</head>
+
+<body unresolved>
+    <div class="navbar navbar-ttl navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">TTL DateTime Picker</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://www.thetrainline.com" target="_blank">thetrainline.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="dateTimePickerModule">
+        <div class="jumbotron">
+            <h1>DateTime Picker</h1>
+            <p>Your task is to critique and suggest improvements to the date time picker below, and have a go at prototyping your suggestions.</p>
+            <p>Our expectation is that you spend at least an hour on the task.</p>
+            <p>
+                The criteria is as followed:
+                <ul>
+                    <li>No restriction in terms of approach, technologies or design.</li>
+                    <li>
+                        It must <strong>at least</strong> fulfil the following criteria:
+                        <ul>
+                            <li>Default should be to today at 09:00.</li>
+                            <li>Be able to set date to today or tomorrow.</li>
+                            <li>The output should present your selection in the format given.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Collect your thoughts...</h3>
+            </div>
+            <div class="panel-body">
+                <p>I improved the UX by reducing the number of inputs upfront, using progressive disclosure for inputs like today/tomorrow.</p>
+
+                <p>For the UI I borrowed elements from the Googles material design, improving the experience with animations and a better design & structure.</p>
+
+                <p>Regarding technology stack, I used web components because I believe they are the future along with the Polymer library. I like working with web components because they give me flexibility, encapsulation; I can quickly use a component from one project into another.</p>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Date Time Picker</h3>
+            </div>
+            <div class="panel-body">
+                <ttl-datepicker></ttl-datepicker>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

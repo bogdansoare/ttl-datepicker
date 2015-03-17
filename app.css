@@ -1,0 +1,17 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 70px;
+}
+
+.navbar-ttl {
+    background-color: #c2d760;
+    border-color: #c2d760;
+}
+
+.navbar-ttl .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-ttl a {
+    color: #08335e;
+}
